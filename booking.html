@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Bookings</title>
+</head>
+<body>
+	<div class="booking-bg">
+		<header class="login-header">
+			<div class="logo">
+				<a href="index.html"><h1>Musafir</h1></a>
+			</div>
+			<ul class="header-option">
+				<li><a class='aliceblue' href="./login.html">Login</a></li>
+				<li><a class='aliceblue' href="./about.html">About</a></li>
+				<li><a class='aliceblue' href="./gallery.html">Gallery</a></li>
+			</ul>
+		</header>
+		<main>
+			<div class="booking-reg">
+				<div class="reg-text">
+					<h1 class="booking-appeal">Book your seat & travel with </h1>
+					<h1 class="sub-logo"> Musafir</h1>
+				</div>
+				<div class="reg">
+					<form action="#" method="POST">
+						<div class="input-grp">
+							<label for="name">Traveller's Name</label>
+							<br>
+							<input type="text" name="" id="name" class="input-txt booking-input" placeholder="Enter Your Name" style="font-weight: 100; color: ivory;">
+						</div>
+						<div class="input-grp">
+							<label for="travel-location">Travel Location</label>
+							<br>
+							<select id="travel-location" class="input-txt booking-input">
+								<option value=" " selected>Select your preferred travel destination</option>
+								<option value="India" style="color: black;">India</option>
+								<option value="Norway"  style="color: black;">Norway</option>
+								<option value="Australia"  style="color: black;">Australia</option>
+								<option value="Iceland"  style="color: black;">Iceland</option>
+								<option value="UAE"  style="color: black;">UAE</option>
+							</select>
+						</div>
+						<div class="input-grp">
+							<label for="">Co-travellers if any</label>
+							<br>
+							<div class="co-traveller">
+								<div class="co-traveller-choice">
+									<label for="adults">Adults</label>
+									<select name="" id="adults" class="booking-input">
+										<option value="0" selected>0</option>
+										<option value="1" style="color: black;">1</option>
+										<option value="2" style="color: black;">2</option>
+										<option value="3" style="color: black;">3</option>
+										<option value="4" style="color: black;">4</option>
+									</select>
+								</div>
+								<div class="co-traveller-choice">
+									<label for="children">Children</label>
+									<select name="" id="children" class="booking-input">
+										<option value="0" selected>0</option>
+										<option value="1" style="color: black;">1</option>
+										<option value="2" style="color: black;">2</option>
+										<option value="3" style="color: black;">3</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="input-grp">
+							<label for="travel-plan">Travel Plan</label>
+							<br>
+							<select id="travel-plan" class="input-txt booking-input">
+								<option value=" " selected>Select your preferred travel plan</option>
+								<option value="IncIndia"  style="color: black;">Incredible India</option>
+								<option value="NobleNorway"  style="color: black;">Noble Norway</option>
+								<option value="AwesomeAustralia"  style="color: black;">Awesome Australia</option>
+								<option value="IcyIceland"  style="color: black;">Icy Iceland</option>
+								<option value="UrUAE"  style="color: black;">Ur UAE</option>
+							</select>
+						</div>
+						<a href="./index.html" class="bookin-submit-btn aliceblue">Book</a>
+					</form>
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
