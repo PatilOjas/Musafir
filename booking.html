@@ -26,16 +26,21 @@
 					<h1 class="sub-logo"> Musafir</h1>
 				</div>
 				<div class="reg">
-					<form action="#" method="POST">
+					<form onsubmit="return false" id="traveller-details">
 						<div class="input-grp">
 							<label for="name">Traveller's Name</label>
 							<br>
-							<input type="text" name="" id="name" class="input-txt booking-input" placeholder="Enter Your Name" style="font-weight: 100; color: ivory;">
+							<input type="text" name="name" id="name" class="input-txt booking-input" placeholder="Enter Your Name" style="font-weight: 100; color: ivory;" required>
 						</div>
 						<div class="input-grp">
-							<label for="travel-location">Travel Location</label>
+							<label for="email">Traveller's Email</label>
 							<br>
-							<select id="travel-location" class="input-txt booking-input">
+							<input type="email" name="email" id="email" class="input-txt booking-input" placeholder="Enter Your Email" style="font-weight: 100; color: ivory;" required>
+						</div>
+						<div class="input-grp">
+							<label for="location">Travel Location</label>
+							<br>
+							<select id="location" name="location" class="input-txt booking-input" required>
 								<option value=" " selected>Select your preferred travel destination</option>
 								<option value="India" style="color: black;">India</option>
 								<option value="Norway"  style="color: black;">Norway</option>
@@ -50,7 +55,7 @@
 							<div class="co-traveller">
 								<div class="co-traveller-choice">
 									<label for="adults">Adults</label>
-									<select name="" id="adults" class="booking-input">
+									<select name="" id="adults" name="adults" class="booking-input">
 										<option value="0" selected>0</option>
 										<option value="1" style="color: black;">1</option>
 										<option value="2" style="color: black;">2</option>
@@ -60,7 +65,7 @@
 								</div>
 								<div class="co-traveller-choice">
 									<label for="children">Children</label>
-									<select name="" id="children" class="booking-input">
+									<select name="" id="children" name="children" class="booking-input">
 										<option value="0" selected>0</option>
 										<option value="1" style="color: black;">1</option>
 										<option value="2" style="color: black;">2</option>
@@ -72,7 +77,7 @@
 						<div class="input-grp">
 							<label for="travel-plan">Travel Plan</label>
 							<br>
-							<select id="travel-plan" class="input-txt booking-input">
+							<select id="travelplan" name="travelplan" class="input-txt booking-input" required>
 								<option value=" " selected>Select your preferred travel plan</option>
 								<option value="IncIndia"  style="color: black;">Incredible India</option>
 								<option value="NobleNorway"  style="color: black;">Noble Norway</option>
@@ -81,11 +86,12 @@
 								<option value="UrUAE"  style="color: black;">Ur UAE</option>
 							</select>
 						</div>
-						<a href="./index.html" class="bookin-submit-btn aliceblue">Book</a>
+						<button type="submit" class="bookin-submit-btn aliceblue">Book</button>
 					</form>
 				</div>
 			</div>
 		</main>
 	</div>
 </body>
+<script src="./index.js"></script>
 </html>

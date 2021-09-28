@@ -21,85 +21,25 @@
 			</ul>
 		</header>
 		<main>
-			<div class="gallery">
-				<img src="https://source.unsplash.com/1600x900/?indian, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">India</h1>
-				
-				<img src="https://source.unsplash.com/1600x900/?france, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">france</h1>
-
-				<img src="https://source.unsplash.com/1600x900/?spain, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Spain</h1>
-
-				<img src="https://source.unsplash.com/1600x900/?usa, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">United States of America</h1>
-				
-				<img src="https://source.unsplash.com/1600x900/?china, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">China</h1>
-
-				<img src="https://source.unsplash.com/1600x900/?italy, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Italy</h1>
-
-				<img src="https://source.unsplash.com/1600x900/?turkey, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Turkey</h1>
-
-				<img src="https://source.unsplash.com/1600x900/?mexico, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Mexico</h1>
-
-				<img src="https://source.unsplash.com/1600x900/?thailand, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Thailand</h1>
-
-				<img src="https://source.unsplash.com/1600x900/?germany, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Germany</h1>
-
-				<img src="https://source.unsplash.com/1600x900/?england, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">England</h1>
-
-				<img src="https://source.unsplash.com/1600x900/?netherlands, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Netherlands</h1>
-				
-				<img src="https://source.unsplash.com/1600x900/?Poland, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Poland</h1>
-				
-				<img src="https://source.unsplash.com/1600x900/?portugal, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Portugal</h1>
-
-				<img src="https://source.unsplash.com/1600x900/?russia, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Russia</h1>
-				
-				<img src="https://source.unsplash.com/1600x900/?malaysia, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Malaysia</h1>
-				
-				<img src="https://source.unsplash.com/1600x900/?hongkong, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Hong-Kong</h1>
-
-				<img src="https://source.unsplash.com/1600x900/?greece, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Greece</h1>
-				
-				<img src="https://source.unsplash.com/1600x900/?australia, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Australia</h1>
-
-				<img src="https://source.unsplash.com/1600x900/?japan, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Japan</h1>
-				
-				<img src="https://source.unsplash.com/1600x900/?uae, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">United Arab Emirates</h1>
-				
-				<img src="https://source.unsplash.com/1600x900/?singapore, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Singapore</h1>
-				
-				<img src="https://source.unsplash.com/1600x900/?srilanka, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Sri Lanka</h1>
-				
-				<img src="https://source.unsplash.com/1600x900/?indonesia, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Indonesia</h1>
-				
-				<img src="https://source.unsplash.com/1600x900/?ukraine, tourism" alt="Musafir's Gallery Image" class="destImages">
-				<h1 class="destCountry destImages">Ukraine</h1>		
+			<div class="gallery" id="gallery-container">
 			</div>
 		</main>
 	</div>
-	<a href="#top" class="upbutton"><i class="fas fa-arrow-circle-up fa-3x" style="color: #0754b3; background-color: ivory; border-radius: 2.1em;"></i></a>
+	<a href="#top" class="upbutton"><i class="fas fa-arrow-circle-up fa-5x" style="color: #0754b3; background-color: ivory; border-radius: 2.1em;"></i></a>
 </body>
 <!-- <script src="./galleryImageFetcher.js"></script> -->
+<script>
+	var countryList = ['India', 'France', 'Spain', 'USA', 'China', 'Italy', 'Turkey', 'Mexico', 'Thailan', 'Germany', 'England', 'Netherland', 'Poland', 'Portugal', 'Russia', 'Malaysia', 'HongKong', 'Greece', 'Australia', 'Japan', 'UAE', 'Singapore', 'SriLanka', 'Indonesia', 'Ukraine']
+	let galleryContainer = document.getElementById('gallery-container')
+	galleryContainer.innerHTML = ``
+
+	countryList.forEach(countryName => {
+		let galleryImgs = 
+		`<img src="https://source.unsplash.com/1600x900/?${countryName.toLowerCase()},tourism" alt="Musafir's Gallery Image" class="destImages">
+		<h1 class="destCountry">${countryName}</h1>`
+		console.log(galleryImgs)
+		galleryContainer.innerHTML += galleryImgs
+	}); 
+
+</script>
 </html>
